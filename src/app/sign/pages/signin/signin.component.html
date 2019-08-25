@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-5">
+        <div class="card-body">
+          <div *ngIf="!showRememberPassoword">
+            <dynamic-form [config]="config" (submitted)="formSubmitted($event)"></dynamic-form>
+            <div class="form-group m-b-0">
+              <div class="col-sm-12 text-center">
+                  <a href="javascript:;" class="text-info m-l-5" (click)="rememberPassword()">
+                    <b>Forgot password?</b>
+                  </a>
+              </div>
+            </div>
+            <div class="form-group m-b-0">
+              <div class="col-sm-12 text-center">
+                <p>Need account?
+                  <a routerLink="../register" class="text-info m-l-5">
+                    <b>Create it</b>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <app-remember [isOpen]="showRememberPassoword"
+            (showRememberPassoword)="toggleRememberPasswordComponent($event)"></app-remember>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

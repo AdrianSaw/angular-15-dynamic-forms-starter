@@ -1,0 +1,9 @@
+<div id="main-wrapper">
+  <app-navigation *ngIf="auth"></app-navigation>
+  <div>
+    <router-outlet></router-outlet>
+    <app-footer *ngIf="auth"></app-footer>
+  </div>
+</div>
+
+<app-preloader [active]="spinnerActive"></app-preloader>
