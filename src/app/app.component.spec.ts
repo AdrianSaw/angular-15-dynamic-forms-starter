@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -8,13 +8,13 @@ describe('AppComponent', () => {
     { path: 'sign', loadChildren: () => import('./sign/sign.module').then(m => m.SignModule) }
   ];
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
       imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
       ]
     }).compileComponents();
   }));
