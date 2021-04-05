@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.spinnerService.active.subscribe((active: boolean) => {
+      console.log(active);
       this.spinnerActive = active;
     });
 
