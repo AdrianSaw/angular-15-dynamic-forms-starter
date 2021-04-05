@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SigninComponent } from './signin.component';
 import { AuthService } from 'src/app/core/auth/auth.service';
@@ -13,14 +13,14 @@ describe('SigninComponent', () => {
     { path: 'sign', loadChildren: () => import('../../sign.module').then(m => m.SignModule) }
   ];
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SigninComponent ],
       providers: [
         AuthService
       ],
       imports: [
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
         HttpClientModule
       ]
     })
