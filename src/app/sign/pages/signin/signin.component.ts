@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DynamicFormInputTypeEnum } from 'src/app/dynamic-form/models/dynamic-form-input-type.enum';
+import { DynamicFormTypesEnum } from 'src/app/dynamic-form/models/dynamic-form-types.enum';
+import { DynamicFormConfigModel } from 'src/app/dynamic-form/models/dynamic-form-config.model';
 
 @Component({
   selector: 'app-signin',
@@ -12,30 +15,30 @@ export class SigninComponent implements OnInit {
   signForm: FormGroup;
   showRememberPassoword = false;
 
-  config = [
+  config: DynamicFormConfigModel[] = [
     {
-      type: 'input',
-      input_type: 'text',
+      type: DynamicFormTypesEnum.INPUT,
+      input_type: DynamicFormInputTypeEnum.TEXT,
       label: 'Username',
       name: 'username',
       placeholder: 'Enter your username',
       validators: [Validators.required]
     },
     {
-      type: 'input',
-      input_type: 'password',
+      type: DynamicFormTypesEnum.INPUT,
+      input_type: DynamicFormInputTypeEnum.PASSWORD,
       label: 'Password',
       name: 'password',
       placeholder: 'Enter your password',
     },
     {
-      type: 'checkbox',
+      type: DynamicFormTypesEnum.CHECKBOX,
       label: 'Remember me',
       name: 'remember',
     },
     {
       label: 'Log in',
-      type: 'button',
+      type: DynamicFormTypesEnum.BUTTON,
     },
   ];
 

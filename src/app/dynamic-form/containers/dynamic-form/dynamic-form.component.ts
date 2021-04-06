@@ -1,9 +1,9 @@
-import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
-  selector: "dynamic-form",
-  styleUrls: ["dynamic-form.component.scss"],
+  selector: 'dynamic-form',
+  styleUrls: ['dynamic-form.component.scss'],
   template: `
     <form
       class="dynamic-form"
@@ -40,7 +40,7 @@ export class DynamicFormComponent implements OnInit {
     const group = this.fb.group({});
     this.config.forEach(field => {
       if (field.name) {
-        group.addControl(field.name, new FormControl("", field.validators));
+        group.addControl(field.name, new FormControl('', field.validators));
       }
     });
     return group;
