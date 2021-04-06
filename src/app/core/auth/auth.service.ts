@@ -1,7 +1,6 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { ApiService } from '../services/api/api.service';
 import { StorageService } from '../services/storage/storage.service';
 import { Injectable } from '@angular/core';
 
@@ -17,7 +16,6 @@ export class AuthService {
 
     constructor(
         private router: Router,
-        private apiService: ApiService,
         private storageService: StorageService) {
             const isAuthenticated = this.autoSignin();
             this.auth$ = new BehaviorSubject(isAuthenticated);

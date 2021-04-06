@@ -30,7 +30,7 @@ export class ErrorsInterceptor implements HttpInterceptor {
         return event;
       }),
       catchError((error: HttpErrorResponse) => {
-        console.log(error);
+        console.log('ErrorsInterceptor:', error);
         return throwError(error);
       }),
       finalize(() => {
