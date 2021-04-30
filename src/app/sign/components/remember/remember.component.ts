@@ -34,7 +34,7 @@ export class RememberComponent {
   }
 
   formSubmitted(value) {
-    console.log(value);
+    console.log('remember', value);
     this.authService.resetPassword();
   }
 }
