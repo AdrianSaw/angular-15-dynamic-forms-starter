@@ -44,7 +44,6 @@ export class SignupComponent {
   constructor(private authService: AuthService) { }
 
   formSubmitted(value) {
-    console.log(value);
     this.authService.signup();
   }
 }
