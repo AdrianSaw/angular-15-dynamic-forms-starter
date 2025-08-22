@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { FormButtonComponent } from '../components/form-button/form-button.component';
 import { FormInputComponent } from '../components/form-input/form-input.component';
 import { FormSelectComponent } from '../components/form-select/form-select.component';
@@ -18,7 +18,7 @@ const components = {
 })
 export class DynamicFieldDirective implements OnInit {
   @Input() config;
-  @Input() group: FormGroup;
+  @Input() group: UntypedFormGroup;
 
   component;
 

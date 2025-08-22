@@ -20,7 +20,7 @@ describe('SigninComponent', () => {
         AuthService
       ],
       imports: [
-        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+        RouterModule.forRoot(routes, {}),
         HttpClientModule
       ]
     })

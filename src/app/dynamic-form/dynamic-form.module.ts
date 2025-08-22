@@ -11,32 +11,26 @@ import { FormCheckboxComponent } from './components/form-checkbox/form-checkbox.
 
 
 @NgModule({
-  declarations: [
-    DynamicFormComponent,
-    FormInputComponent,
-    FormSelectComponent,
-    FormButtonComponent,
-    DynamicFieldDirective,
-    FormCheckboxComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  entryComponents: [
-    FormButtonComponent,
-    FormInputComponent,
-    FormSelectComponent,
-    FormCheckboxComponent
-  ],
-  exports: [
-    DynamicFormComponent,
-    FormInputComponent,
-    FormSelectComponent,
-    FormButtonComponent,
-    DynamicFieldDirective,
-    FormCheckboxComponent
-  ]
+    declarations: [
+        DynamicFormComponent,
+        FormInputComponent,
+        FormSelectComponent,
+        FormButtonComponent,
+        DynamicFieldDirective,
+        FormCheckboxComponent
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    exports: [
+        DynamicFormComponent,
+        FormInputComponent,
+        FormSelectComponent,
+        FormButtonComponent,
+        DynamicFieldDirective,
+        FormCheckboxComponent
+    ]
 })
 export class DynamicFormModule { }

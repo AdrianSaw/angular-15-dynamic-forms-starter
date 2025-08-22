@@ -1,5 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-input',
@@ -14,6 +14,6 @@ import { FormGroup } from '@angular/forms';
 
 export class FormCheckboxComponent {
   config;
-  group: FormGroup;
+  group: UntypedFormGroup;
 
 }
