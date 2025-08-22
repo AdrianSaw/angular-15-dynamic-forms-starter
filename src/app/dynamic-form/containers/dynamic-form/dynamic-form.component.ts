@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
+import { UntypedFormGroup, UntypedFormBuilder, UntypedFormControl } from "@angular/forms";
 
 @Component({
   selector: "dynamic-form",
@@ -24,13 +24,13 @@ export class DynamicFormComponent implements OnInit {
   @Input() config: any[] = [];
   @Output() submitted = new EventEmitter();
 
-  form: FormGroup;
+  form: UntypedFormGroup;
 
   get changes() { return this.form.valueChanges; }
   get valid() { return this.form.valid; }
   get value() { return this.form.value; }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnInit() {
     this.form = this.createGroup();
@@ -40,7 +40,7 @@ export class DynamicFormComponent implements OnInit {
     const group = this.fb.group({});
     this.config.forEach(field => {
       if (field.name) {
-        group.addControl(field.name, new FormControl("", field.validators));
+        group.addControl(field.name, new UntypedFormControl("", field.validators));
       }
     });
     return group;

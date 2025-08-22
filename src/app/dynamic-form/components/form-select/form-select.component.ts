@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'form-select',
@@ -20,5 +20,5 @@ import { FormGroup } from '@angular/forms';
 })
 export class FormSelectComponent {
   config;
-  group: FormGroup;
+  group: UntypedFormGroup;
 }
