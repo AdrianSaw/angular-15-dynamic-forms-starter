@@ -1,6 +1,7 @@
 {
-  "name": "angular-template",
+  "name": "angular-15-starter-template",
   "version": "0.0.0",
+  "description": "Angular 15 starter template with dynamic/configurable forms, authentication system, and admin dashboard components",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
