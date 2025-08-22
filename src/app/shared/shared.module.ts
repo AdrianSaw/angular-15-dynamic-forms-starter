@@ -5,19 +5,18 @@ import { DynamicFormModule } from '../dynamic-form/dynamic-form.module';
 
 
 @NgModule({
-  declarations: [],
-  exports: [
-    FormsModule,
-    ReactiveFormsModule,
-    DynamicFormModule
-  ],
-  entryComponents: [ ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    DynamicFormModule
-  ]
+    declarations: [],
+    exports: [
+        FormsModule,
+        ReactiveFormsModule,
+        DynamicFormModule
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DynamicFormModule
+    ]
 })
 
 export class SharedModule { }
